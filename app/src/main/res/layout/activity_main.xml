@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="jesusmartinez.example.com.bluetoothconnection.MainActivity">
+
+    <TextView
+        android:id="@+id/textViewState" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:layout_marginTop="20dp"
+        android:text="Desconectado" android:textAppearance="?android:attr/textAppearanceLarge" />
+    <Button
+        android:id="@+id/buttonServer" android:onClick="onClickServer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/textViewState" android:layout_centerHorizontal="true" android:layout_marginTop="20dp" android:text="Servidor" />
+    <Button
+        android:id="@+id/buttonClient" android:onClick="onClickClient" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_below="@+id/buttonServer" android:layout_marginTop="20dp" android:text="Cliente" />
+    <Button
+        android:id="@+id/buttonSend" android:onClick="onClickSend" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_below="@+id/buttonClient" android:layout_marginTop="20dp" android:enabled="false" android:text="Enviar..." />
+
+    <Button android:id="@+id/buttonCloseConnection" android:onClick="onClickCloseConnection" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_below="@+id/buttonSend" android:layout_marginTop="20dp" android:enabled="false" android:text="Cerrar conexión" />
+</RelativeLayout>
