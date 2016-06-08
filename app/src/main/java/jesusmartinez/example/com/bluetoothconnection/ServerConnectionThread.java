@@ -13,14 +13,12 @@ import java.util.UUID;
 public class ServerConnectionThread extends Thread {
 
 
-
-
-    ServerConnectionThread serverConnectionThread;
     private final ConnectionListener connectionListener;
     private final BluetoothServerSocket acceptSocket;
 
 
-    public ServerConnectionThread(ConnectionListener connectionListener) { // Guardo el escuchador de conexión
+    public ServerConnectionThread(ConnectionListener connectionListener) {
+        // Guardo el escuchador de conexión
         this.connectionListener = connectionListener;
         BluetoothServerSocket acceptSocketTemp = null;
         try {
@@ -46,7 +44,8 @@ public class ServerConnectionThread extends Thread {
             }
             if (socket != null) {
                 // Indico que se ha realizado la conexión
-                connectionListener.onConnected(socket); // Cierro el socket de conexión
+                connectionListener.onConnected(socket);
+                // Cierro el socket de conexión
                 try {
                     acceptSocket.close();
                 } catch (IOException e) {
